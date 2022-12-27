@@ -1,6 +1,6 @@
 
-const makeRequest = async function(){
-   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+const makeRequest = async function(url){
+   const res = await fetch(url);
    if(!res.ok){
     const massage = `Error ${res.status}`;
     throw new Error(massage);
@@ -9,7 +9,7 @@ const makeRequest = async function(){
    return data;
 }
 const getData = function(){
-    makeRequest()
+    makeRequest('https://jsonplaceholder.typicode.com/posts')
         .then(function(res){
             console.log(res);
         })
