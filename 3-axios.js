@@ -23,22 +23,80 @@ console.clear();
 console.log(window);
 // now we can find the axios in window
 
+// axios
+// .get("https://jsonplaceholder.typicode.com/posts")
+// .then(function(res){
+//     console.log(res.data);
+// })
+// .catch(function(err){
+//     console.log(err);
+// })
+
+
+//! post 
+// axios
+// .post("https://jsonplaceholder.typicode.com/posts",{
+//     method: 'POST',
+//     body: JSON.stringify({
+//       title: 'foo',
+//       body: 'bar',
+//       userId: 1,
+//     }),
+// })
+// .then(function(res){
+//     console.log(res.data);
+// })
+// .catch(function(err){
+//     console.log(err);
+// })
+
+//! put 
+
+// axios
+// .put("https://jsonplaceholder.typicode.com/posts/1",{
+//     method: 'PUT',
+//     body: JSON.stringify({
+//       title: 'fooMS',
+//       body: 'barJS',
+//       userId: 1,
+//     }),
+// })
+// .then(function(res){
+//     console.log(res.data);
+// })
+// .catch(function(err){
+//     console.log(err);
+// })
+
+
+//patch
+// axios
+// .patch("https://jsonplaceholder.typicode.com/posts/1",{
+//     method: 'PATCH',
+//     body: JSON.stringify({
+//       title: 'fooMSaa'
+//     }),
+// })
+// .then(function(res){
+//     console.log(res.data);
+// })
+// .catch(function(err){
+//     console.log(err);
+// })
+
+
+
+
+// ! delete
+
 axios
-.get("https://jsonplaceholder.typicode.com/posts")
+.delete("https://jsonplaceholder.typicode.com/posts/1")
 .then(function(res){
     console.log(res.data);
 })
-
-
-
-
-
-
-
-
-
-
-
+.catch(function(err){
+    console.log(err);
+})
 
 
 
