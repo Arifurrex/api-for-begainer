@@ -42,16 +42,40 @@
  
 
 //! update
+// fetch('https://jsonplaceholder.typicode.com/posts/1',{
+//     method: 'PUT',
+//     headers: {
+//         'Content-type': 'application/json; charset=UTF-8',
+//       },
+//     body:JSON.stringify({
+//         id:1,
+//         title: 'fatrabora',
+//         body:'batrawata',
+//         userId:1,
+//     })
+// })
+// .then(function(res){
+//     if(!res.ok){
+//       const massage = `Error : ${res.status}`;
+//       throw new Error (massage)
+//     }
+//     return res.json();
+// })
+// .then(function(res){
+//     console.log(res);
+// })
+// .catch(function(err){
+//     console.log(err);
+// })
+
+// !PATCH FOR UPDATE SINGLE DATA 
 fetch('https://jsonplaceholder.typicode.com/posts/1',{
-    method: 'PUT',
+    method: 'PATCH',
     headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
     body:JSON.stringify({
-        id:1,
-        title: 'fatrabora',
-        body:'batrawata',
-        userId:1,
+        title: 'fatraborayala',
     })
 })
 .then(function(res){
@@ -67,8 +91,6 @@ fetch('https://jsonplaceholder.typicode.com/posts/1',{
 .catch(function(err){
     console.log(err);
 })
-
-
 
 
 
