@@ -1,7 +1,10 @@
-fetch('https://jsonplaceholder.typicode.com/posts')
+fetch('https://jsonplaceholder.typicode.com/post')
 .then(function(res){
     console.log(res.json());
 })
 .then(function(res){
     console.log(res);
+})
+.catch(function(err){
+    console.log(err);
 })
