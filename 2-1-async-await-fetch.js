@@ -41,3 +41,60 @@ const postData = function(){
         })
 }
 postData();
+
+
+//!update data
+const updateData = function(){
+    makeRequest('https://jsonplaceholder.typicode.com/posts/1',{
+        method: 'PUT',
+  body: JSON.stringify({
+    title: 'foolala',
+    body: 'barlala',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+    })
+        .then(function(res){
+            console.log(res);
+        })
+        .catch(function(err){
+            console.log(err);
+        })
+}
+updateData();
+
+//!patch data
+const PatchData = function(){
+    makeRequest('https://jsonplaceholder.typicode.com/posts/1',{
+        method: 'PATCH',
+  body: JSON.stringify({
+    title: 'foolalaupsdtesingle'
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+    })
+        .then(function(res){
+            console.log(res);
+        })
+        .catch(function(err){
+            console.log(err);
+        })
+}
+PatchData();
+
+//! DELETE 
+const deleteData = function(){
+    makeRequest('https://jsonplaceholder.typicode.com/posts/1',{
+        method: 'DELETE',
+    })
+        .then(function(res){
+            console.log(res);
+        })
+        .catch(function(err){
+            console.log(err);
+        })
+}
+PatchData();
