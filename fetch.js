@@ -1,6 +1,10 @@
 fetch('https://jsonplaceholder.typicode.com/post')
 .then(function(res){
-    console.log(res.json());
+    if(!res.ok){
+      const massage = `Error : ${res.status}`;
+      throw new Error (massage)
+    }
+    return res.json();
 })
 .then(function(res){
     console.log(res);
