@@ -378,7 +378,7 @@ deleteData();
 * fetch() method e argument হিসাবে  url dibo.
 * url er sate aro argument dite parbo
 
-*fetch() method e url dewar por amra .then() method টা দেব 
+* fetch() method e url dewar por amra .then() method টা দেব 
 then এর ভেতর যে response টা আসবে টা আমরা console। log করে dekbo 
 
 ```javascript
@@ -389,5 +389,24 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 ```
 
 ![Screenshot 2022-12-29 211008](https://user-images.githubusercontent.com/48369328/209972827-dd33d46e-bcb9-4015-ba6d-a69a9769b97c.png)
+
+
+Body তে কিন্ত readableStream দেখাচে . এটা আমরা ইউজ করতে পারবো না । 
+এই response কে আমরা json() এ convert করব res.json() এর মদ্যমে  
+
+```javascript
+fetch('https://jsonplaceholder.typicode.com/posts')
+.then(function(res){
+   console.log(res.json());
+})
+```
+![Screenshot 2022-12-29 220025](https://user-images.githubusercontent.com/48369328/209981050-79290edf-41f6-42c7-ab22-80544b81c28e.png)
+
+
+
+
+
+
+
 
 

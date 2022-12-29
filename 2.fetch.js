@@ -22,8 +22,9 @@ then এর ভেতর যে response টা আসবে টা আমরা
 */
 fetch('https://jsonplaceholder.typicode.com/posts')
 .then(function(res){
-  console.log(res);
+   console.log(res.json());
 })
+
 // fetch('https://jsonplaceholder.typicode.com/post')
 // .then(function(res){
 //     if(!res.ok){
