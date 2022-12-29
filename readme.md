@@ -440,4 +440,54 @@ fetch('https://jsonplaceholder.typicode.com/post')
 ![Screenshot 2022-12-29 224204](https://user-images.githubusercontent.com/48369328/209983597-d2f361b1-6a06-455d-99d7-2a90f59d2ace.png)
 
 
+Post এর জন্যে fetch()এ argument হিসাবে url এবং কিছু config সেট করব 
+Method:post
+body:JSON.stringify()
+Data  server jokon send korbo json e send korbo json.stringfy er maddome
+
+headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      }
+Header set korte hobe
+
+
+
+```javascript
+
+fetch('https://jsonplaceholder.typicode.com/posts',{
+    method: 'POST',
+    headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    body:JSON.stringify({
+        title: 'fatra',
+        body:'batra',
+        userId:1,
+    })
+})
+.then(function(res){
+    if(!res.ok){
+      const massage = `Error : ${res.status}`;
+      throw new Error (massage)
+    }
+    return res.json();
+})
+.then(function(res){
+    console.log(res);
+})
+.catch(function(err){
+    console.log(err);
+})
+ 
+```
+
+
+
+
+
+
+
+
+
+
 
