@@ -514,12 +514,37 @@ fetch('https://jsonplaceholder.typicode.com/posts/1',{
 ```
 
 
-
 ![Screenshot 2022-12-29 234204](https://user-images.githubusercontent.com/48369328/209989827-dab00ac0-3a5d-40c4-8083-e7a704ebe2f1.png)
 
 
 
 
+# PATCH FOR UPDATE SINGLE DATA 
+```javascript
+fetch('https://jsonplaceholder.typicode.com/posts/1',{
+    method: 'PATCH',
+    headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    body:JSON.stringify({
+        title: 'fatraborayala',
+    })
+})
+.then(function(res){
+    if(!res.ok){
+      const massage = `Error : ${res.status}`;
+      throw new Error (massage)
+    }
+    return res.json();
+})
+.then(function(res){
+    console.log(res);
+})
+.catch(function(err){
+    console.log(err);
+})
+```
+![Screenshot 2022-12-29 234733](https://user-images.githubusercontent.com/48369328/209990411-a6da4e53-1d17-4369-9140-c8a5000f0e7d.png)
 
 
 
