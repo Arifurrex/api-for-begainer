@@ -437,8 +437,7 @@ fetch('https://jsonplaceholder.typicode.com/post')
     console.log(err);
 })
 ```
+![Screenshot 2022-12-29 224204](https://user-images.githubusercontent.com/48369328/209983597-d2f361b1-6a06-455d-99d7-2a90f59d2ace.png)
 
-
-![Screenshot 2022-12-29 224204](https://user-images.githubusercontent.com/48369328/209983268-98bc6bd5-6f3d-47ed-ae3a-ea24fd7557f3.png)
 
 
