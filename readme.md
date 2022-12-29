@@ -402,9 +402,19 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 ```
 ![Screenshot 2022-12-29 220025](https://user-images.githubusercontent.com/48369328/209981050-79290edf-41f6-42c7-ab22-80544b81c28e.png)
 
+এই response কে আমরা json() এ convert করব res.json() এর মদ্যমে .এটা একটা promise দেখাচ্ছে । promise টা আমরা return kore dibo.
+Then এর মদ্যমে আবার আমরা promise এর response এর data টা পাব 
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+.then(function(res){
+  return res.json();
+})
+.then(function(res){
+   console.log(res);
+})
 
 
-
+![Screenshot 2022-12-29 215841](https://user-images.githubusercontent.com/48369328/209981292-45ec7f30-60ef-4c88-a989-c053769f3b30.png)
 
 
 
