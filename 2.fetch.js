@@ -1,3 +1,29 @@
+/* 
+4 WAY  to call api -XMLHttpRequest , fetch,axios,jquery
+fetch() has replace XMLHttpRequest
+fetch() - global method for making HTTP request
+2 way to call  -than, async await
+
++ fetch() is easy to use comapre to XMLHttpRequest
++ fetch() returns a promise
+- returned promise can only handle network error
+- does not support all the older browser
+
+*/
+
+/* 
+fetch er maddome api call kora very easy .
+fetch() লিখব  
+fetch() method e argument হিসাবে  url dibo.
+url er sate aro argument dite parbo
+
+fetch() method e url dewar por amra .then() method টা দেব 
+then এর ভেতর যে response টা আসবে টা আমরা console। log করে dekbo 
+*/
+fetch('https://jsonplaceholder.typicode.com/posts')
+.then(function(res){
+  console.log(res);
+})
 // fetch('https://jsonplaceholder.typicode.com/post')
 // .then(function(res){
 //     if(!res.ok){
@@ -92,10 +118,10 @@
 //     console.log(err);
 // })
 
-//! delete
-fetch('https://jsonplaceholder.typicode.com/posts/1', {
-  method: 'DELETE',
-});
+// //! delete
+// fetch('https://jsonplaceholder.typicode.com/posts/1', {
+//   method: 'DELETE',
+// });
 
 
 
