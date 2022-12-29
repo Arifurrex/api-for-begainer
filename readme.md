@@ -417,7 +417,26 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 
 ![Screenshot 2022-12-29 215841](https://user-images.githubusercontent.com/48369328/209981292-45ec7f30-60ef-4c88-a989-c053769f3b30.png)
 
+# More about fetch
 
+Error handling 
+
+```javascript
+fetch('https://jsonplaceholder.typicode.com/post')
+.then(function(res){
+    if(!res.ok){
+      const massage = `Error : ${res.status}`;
+      throw new Error (massage)
+    }
+    return res.json();
+})
+.then(function(res){
+    console.log(res);
+})
+.catch(function(err){
+    console.log(err);
+})
+```
 
 
 
