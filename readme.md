@@ -439,6 +439,7 @@ fetch('https://jsonplaceholder.typicode.com/post')
 ```
 ![Screenshot 2022-12-29 224204](https://user-images.githubusercontent.com/48369328/209983597-d2f361b1-6a06-455d-99d7-2a90f59d2ace.png)
 
+# post 
 
 Post এর জন্যে fetch()এ argument হিসাবে url এবং কিছু config সেট করব 
 Method:post
@@ -483,7 +484,38 @@ fetch('https://jsonplaceholder.typicode.com/posts',{
 
 ![Screenshot 2022-12-29 230817](https://user-images.githubusercontent.com/48369328/209986187-859390e1-81d5-43d6-9045-e005f399aef8.png)
 
+# update
+```javascript
+fetch('https://jsonplaceholder.typicode.com/posts/1',{
+    method: 'PUT',
+    headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    body:JSON.stringify({
+        id:1,
+        title: 'fatrabora',
+        body:'batrawata',
+        userId:1,
+    })
+})
+.then(function(res){
+    if(!res.ok){
+      const massage = `Error : ${res.status}`;
+      throw new Error (massage)
+    }
+    return res.json();
+})
+.then(function(res){
+    console.log(res);
+})
+.catch(function(err){
+    console.log(err);
+})
+```
 
+
+
+![Screenshot 2022-12-29 234204](https://user-images.githubusercontent.com/48369328/209989827-dab00ac0-3a5d-40c4-8083-e7a704ebe2f1.png)
 
 
 
