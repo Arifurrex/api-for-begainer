@@ -548,6 +548,24 @@ fetch('https://jsonplaceholder.typicode.com/posts/1',{
 
 
 
+# delete
+```javascript
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'DELETE',
+})
+.then(function(res){
+    if(!res.ok){
+      const massage = `Error : ${res.status}`;
+      throw new Error (massage)
+    }
+    return res.json();
+})
+.then(function(res){
+    console.log(res);
+})
+.catch(function(err){
+    console.log(err);
+})
+```
 
-
-
+![Screenshot 2022-12-29 235257](https://user-images.githubusercontent.com/48369328/209990898-8fc9fb8b-fd50-4cc1-afed-8a4f62ef91af.png)

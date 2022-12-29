@@ -92,14 +92,32 @@ then এর ভেতর যে response টা আসবে টা আমরা
 // })
 
 // !PATCH FOR UPDATE SINGLE DATA 
-fetch('https://jsonplaceholder.typicode.com/posts/1',{
-    method: 'PATCH',
-    headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    body:JSON.stringify({
-        title: 'fatraborayala',
-    })
+// fetch('https://jsonplaceholder.typicode.com/posts/1',{
+//     method: 'PATCH',
+//     headers: {
+//         'Content-type': 'application/json; charset=UTF-8',
+//       },
+//     body:JSON.stringify({
+//         title: 'fatraborayala',
+//     })
+// })
+// .then(function(res){
+//     if(!res.ok){
+//       const massage = `Error : ${res.status}`;
+//       throw new Error (massage)
+//     }
+//     return res.json();
+// })
+// .then(function(res){
+//     console.log(res);
+// })
+// .catch(function(err){
+//     console.log(err);
+// })
+
+//! delete
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'DELETE',
 })
 .then(function(res){
     if(!res.ok){
@@ -114,11 +132,6 @@ fetch('https://jsonplaceholder.typicode.com/posts/1',{
 .catch(function(err){
     console.log(err);
 })
-
-// //! delete
-// fetch('https://jsonplaceholder.typicode.com/posts/1', {
-//   method: 'DELETE',
-// });
 
 
 
