@@ -439,4 +439,6 @@ fetch('https://jsonplaceholder.typicode.com/post')
 ```
 
 
+![Screenshot 2022-12-29 224204](https://user-images.githubusercontent.com/48369328/209983268-98bc6bd5-6f3d-47ed-ae3a-ea24fd7557f3.png)
+
 
