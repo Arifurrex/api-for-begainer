@@ -381,6 +381,13 @@ url er sate aro argument dite parbo
 fetch() method e url dewar por amra .then() method টা দেব 
 then এর ভেতর যে response টা আসবে টা আমরা console। log করে dekbo 
 
+```javascript
+fetch('https://jsonplaceholder.typicode.com/posts')
+.then(function(res){
+  console.log(res);
+})
+```
+
 ![Screenshot 2022-12-29 211008](https://user-images.githubusercontent.com/48369328/209972827-dd33d46e-bcb9-4015-ba6d-a69a9769b97c.png)
 
 
